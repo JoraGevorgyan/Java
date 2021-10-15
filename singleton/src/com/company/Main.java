@@ -1,7 +1,6 @@
 package com.company;
 
 import single.Single;
-
 import java.util.Scanner;
 
 public class Main {
