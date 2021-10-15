@@ -7,7 +7,9 @@ public class Single {
     public static Single getSingle() {
         if (object == null) {
             synchronized (Single.class) {
-                object = new Single();
+                if (object == null) {
+                    object = new Single();
+                }
             }
             return object;
         }
