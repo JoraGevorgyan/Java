@@ -22,4 +22,22 @@ public class Shape implements Drawable, Printable {
     public void print() {
         System.out.println("Shape is printing a " + type_ + "!");
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if (other == this) {
+            return true;
+        }
+        if (!(other instanceof Shape tmp)) {
+            return false;
+        }
+        return type_.equals(tmp.type_);
+    }
+
+    @Override
+    public String toString() {
+        return "Shape {" +
+                "type = '" + type_ +
+                "'}";
+    }
 }
